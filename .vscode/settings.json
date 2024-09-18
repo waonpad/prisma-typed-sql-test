@@ -49,5 +49,12 @@
   "explorer.fileNesting.patterns": {
     "*.module.css": "${capture}.module.css.d.ts, ${capture}.module.css.d.ts.map",
     "*.module.scss": "${capture}.module.scss.d.ts, ${capture}.module.scss.d.ts.map"
-  },
+  }
+  // "sqlLanguageServer.connections": [
+  //   {
+  //     "name": "sqlite",
+  //     "adapter": "sqlite3",
+  //     "filename": "./prisma/dev.db"
+  //   }
+  // ]
 }

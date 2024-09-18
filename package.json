@@ -4,20 +4,33 @@
   "type": "module",
   "scripts": {
     "prepare": "lefthook install",
+    "setup": "$npm_execpath install && cp -n .env.example .env; exit 0",
     "fmt": "biome format --write .",
     "lnt": "biome lint --write .",
     "che": "biome check --write .",
-    "tst": "echo 'vitest run してください'",
-    "tst:w": "vitest watch --silent",
-    "tst:ci": "vitest run --silent"
+    "test": "echo 'vitest run してください'",
+    "test:w": "vitest watch --silent",
+    "test:ci": "vitest run --silent",
+    "db:fmt": "npx prisma format",
+    "db:mig": "npx prisma migrate dev",
+    "db:gen": "npx prisma generate",
+    "db:gen:sql": "npx prisma generate --sql",
+    "db:gen:sql:w": "npx prisma generate --sql --watch",
+    "db:studio": "npx prisma studio",
+    "db:reset": "npx prisma migrate reset",
+    "db:seed": "bun run prisma/seed.ts"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.8.3",
     "@types/bun": "latest",
     "lefthook": "^1.7.15",
+    "prisma": "^5.19.1",
     "vitest": "^2.0.5"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.19.1"
   }
 }

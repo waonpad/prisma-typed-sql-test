@@ -3,7 +3,7 @@ pre-push:
     run-type-check:
       run: bun run tsc
     run-tests:
-      run: bun run tst
+      run: bun run test
 
 pre-commit:
   parallel: true
