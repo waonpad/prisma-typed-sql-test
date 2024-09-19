@@ -2,7 +2,7 @@ SELECT
     p.id,
     p.title,
     p.content,
-    p.publihed,
+    p.published,
     u.id as "authorId",
     u.name as "authorName"
 FROM
