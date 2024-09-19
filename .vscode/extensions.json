@@ -1,7 +1,3 @@
 {
-  "recommendations": [
-    "biomejs.biome",
-    "Prisma.prisma",
-    "joe-re.sql-language-server"
-  ]
+  "recommendations": ["biomejs.biome", "Prisma.prisma"]
 }
