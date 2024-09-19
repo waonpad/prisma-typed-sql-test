@@ -3,10 +3,11 @@ SELECT
     p.title,
     p.content,
     p.published,
-    u.id as "authorId",
-    u.name as "authorName"
+    u.id as authorId,
+    u.name as authorName
 FROM
-  "Post" as p
-    INNER JOIN "User" as u ON u.id = p."authorId"
+  Post as p
+    INNER JOIN User as u ON u.id = p.authorId
 WHERE
+-- @param {Int} :id
   u.id = :id

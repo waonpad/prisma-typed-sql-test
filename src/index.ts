@@ -1,4 +1,4 @@
-import { postsWithAuthor } from "@prisma/client/sql";
+import { postsWithAuthor, userById } from "@prisma/client/sql";
 import { prisma } from "./lib/prisma/client";
 
 const userId = 1;
@@ -14,3 +14,7 @@ const posts = await prisma.$queryRawTyped(postsWithAuthor(userId));
 // });
 
 console.log(posts);
+
+const user = await prisma.$queryRawTyped(userById(userId));
+
+console.log(user);
